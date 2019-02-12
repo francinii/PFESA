@@ -1041,7 +1041,7 @@ CREATE TABLE `sis_sessions` (
   `forced_expires` int(11) unsigned NOT NULL,
   `ua` varchar(40) NOT NULL DEFAULT '',
   PRIMARY KEY (`sid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sis_sessions
@@ -1057,7 +1057,7 @@ CREATE TABLE `sis_sessions_vars` (
   `sid` varchar(100) NOT NULL,
   KEY `sid` (`sid`),
   CONSTRAINT `sis_sessions_vars_ibfk_1` FOREIGN KEY (`sid`) REFERENCES `sis_sessions` (`sid`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sis_sessions_vars
@@ -1470,57 +1470,15 @@ BEGIN
 
 
 DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET respuesta=0;
-
-
-
-
-
-
-
 START TRANSACTION;
-
-
-
-
-
-
-
 INSERT INTO sis_mod (mod_name,mod_desc)
-
-
-
 VALUES (p_name_mod,p_desc_mod);
-
-
-
 SELECT ROW_COUNT() INTO respuesta;
-
-
-
-
-
-
-
 IF (respuesta=1) THEN
-
-
-
                                         COMMIT;
-
-
-
 ELSE
-
-
-
                                         ROLLBACK;
-
-
-
                                         SET respuesta=0;
-
-
-
 END IF;
 
 

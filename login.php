@@ -8,6 +8,7 @@ require_once 'config.inc';
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title><?= $page_title ?></title>
         <?php
+  
         include('includes.php');
         include('lang/lang.es');
         ?>

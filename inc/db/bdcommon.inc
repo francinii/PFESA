@@ -1,8 +1,8 @@
 <?php
-    $db = "base";
+    $db = "pfesa";
     $Host = "localhost";	
     $db_host = "localhost";
     $usuario = "root";
-    $clave = "root";
+    $clave = "";
     $DBMS="mysql";
 ?>
