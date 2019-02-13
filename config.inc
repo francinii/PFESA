@@ -10,9 +10,9 @@
  */
 
 $cds_domain = "http://localhost";
-/* $cds_locate = "/base/";  */
-$cds_locate = "/PFESA/";
-$ldap_status = 0;
+$cds_locate = "/PFESA/"; 
+
+$ldap_status = 1;
 $ldap_server[0] = "10.0.2.53";
 $ldap_dn = "dc=una,dc=ac,dc=cr";
 
@@ -27,7 +27,7 @@ $page_cant = 10;
 
 $page_title = "PFESA";
 
-$footer_title= "PLAN DE FORTALECIMIENTO Y ESTABILIDAD DEL SECTOR ACADÉMICO - PFESA<br/>";
+$footer_title= "Sistema PFESA para la creacion de otros sistemas<br/>USTDS";
 
 $act1 = 1; //Ver
 $act2 = 2; //Listar

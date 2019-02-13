@@ -10,7 +10,6 @@ $user = $_POST['user'];
 $pass = $_POST['pass'];
 $out = "";
 $user_name = "";
-
 if ($ldap_status == 1) {
     $sql = "SELECT checklogin('" . $user . "','" . md5($pass) . "') as li_out;";
     $sqlout = seleccion($sql);
