@@ -1,5 +1,5 @@
 <?php
-    $db = "pfesa";
+    $db = "sigpe";
     $Host = "localhost";	
     $db_host = "localhost";
     $usuario = "root";
